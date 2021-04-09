@@ -21,24 +21,26 @@ public class Estudiantes{
         String txt = "";
 
         for(int x = 0; x<senti-1;x++){
-            txt += x+".) "+nombres[x]+"\n";
+            txt += x+".) "+nombres[x]+"     codigo: "+codigo[x] +"\n";
         }
 
         LE.mostrarInformacion(null, null, txt, "ok", null);
 
     }
 
-    public void ingresar_alumno(int x , String y , double z){
+    public void ingresar_alumno(){
 
-        this.codigo[senti] = x;
-        this.nombres[senti] = y;
-        this.promedios[senti] = z;
+        this.codigo[senti] = LE.leerInt("Ingrese codigo : ");
+        this.nombres[senti] = LE.leerString("Ingrese nombre : ");
+        this.promedios[senti] = LE.leerDouble("Ingrese proedio : ");
 
         this.senti =  senti + 1;
 
     }
 
     
+
+
 
 
 
