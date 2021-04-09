@@ -1,5 +1,4 @@
 # Clase_Poo_6_1
-
 Desarrollar una solución que permita almacenar los códigos, nombres y
 promedios de todos los alumnos de un salón de clase. Utilice un menú con las
 opciones siguientes:
