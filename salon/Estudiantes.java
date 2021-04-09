@@ -20,11 +20,11 @@ public class Estudiantes{
 
         String txt = "";
 
-        for(int x = 0; x<senti-1;x++){
+        for(int x = 0; x<senti;x++){
             txt += x+".) "+nombres[x]+"     codigo: "+codigo[x]+"\n";
         }
 
-        LE.mostrarInformacion(null, null, txt, "ok", null);
+        LE.mostrarInformacion("Sistema", "Lista estudiantes", txt, "ok", null);
 
     }
 
@@ -48,19 +48,20 @@ public class Estudiantes{
             if(mayor < promedios[x]){
                 mayor = promedios[x];
                 vec = x;
-            }            
-
-            LE.mostrarInformacion("promedio mas alto"+"\n"+nombres[x]+"     nota :"+promedios[x]);
-
+            }             
         }
+
+        LE.mostrarInformacion("promedio mas alto"+"\n"+nombres[vec]+"     nota :"+promedios[vec]);
+
+
     }
 
     public void lista_alumnos_total(){
 
         String txt = "";
 
-        for(int x = 0; x<senti-1;x++){
-            txt += x+".) "+nombres[x]+"     codigo: "+codigo[x]+"   Promedios :"+promedios[x];
+        for(int x = 0; x<senti;x++){
+            txt += x+".) "+nombres[x]+"     codigo: "+codigo[x]+"   Promedios :"+promedios[x]+"\n";
         }
 
         LE.mostrarInformacion(null, null, txt, "ok", null);
@@ -88,7 +89,14 @@ public class Estudiantes{
             int op = LE.leerInt(txt);
             switch(op){
                 case 1:
-                ingresar_alumno();
+
+                if(senti >= codigo.length ){
+                    LE.mostrarAdvertencia("numero maximo de alumnos");
+                }else{
+                    ingresar_alumno();
+                }
+
+                
                 break;
 
                 case 2:
@@ -101,15 +109,17 @@ public class Estudiantes{
 
                 case 4:
                 lista_alumnos_total();
+                break;
 
                 case 5:
                 salida = false;
+                break;
 
                 default :
                 LE.mostrarAdvertencia("Ingrese una opcion valida");     
 
             }
-            
+
 
         }
 

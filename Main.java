@@ -1,5 +1,6 @@
 
 import biblioteca.LE;
+import salon.*;
 
 /*
 Desarrollar una solución que permita almacenar los códigos, nombres y
@@ -19,8 +20,12 @@ public class Main{
 
     public static void main(String[] args) {
         
-        
+        int tam = LE.leerInt("ingrese cantidad maxima de estudiantes : ");
 
+
+        Estudiantes objEstudiantes = new Estudiantes(tam);
+
+        objEstudiantes.menu();
 
     }
 
