@@ -21,7 +21,7 @@ public class Estudiantes{
         String txt = "";
 
         for(int x = 0; x<senti-1;x++){
-            txt += x+".) "+nombres[x]+"     codigo: "+codigo[x] +"\n";
+            txt += x+".) "+nombres[x]+"     codigo: "+codigo[x]+"\n";
         }
 
         LE.mostrarInformacion(null, null, txt, "ok", null);
@@ -38,6 +38,28 @@ public class Estudiantes{
 
     }
 
+    public void notaMayor(){
+
+        double mayor = -1;
+        int vec = 0;
+
+        for(int x = 0; x < senti ; x++){
+
+            if(mayor < promedios[x]){
+                mayor = promedios[x];
+                vec = x;
+            }            
+
+            LE.mostrarInformacion("promedio mas alto"+"\n"+nombres[x]+"     nota :"+promedios[x]);
+
+        }
+    }
+
+    
+    public void menu(){
+
+            
+    }
     
 
 
