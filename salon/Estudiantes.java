@@ -55,8 +55,63 @@ public class Estudiantes{
         }
     }
 
+    public void lista_alumnos_total(){
+
+        String txt = "";
+
+        for(int x = 0; x<senti-1;x++){
+            txt += x+".) "+nombres[x]+"     codigo: "+codigo[x]+"   Promedios :"+promedios[x];
+        }
+
+        LE.mostrarInformacion(null, null, txt, "ok", null);
+
+    }
+
     
     public void menu(){
+
+        String txt = "";
+
+        boolean salida = true;
+
+        txt += "        Menu"+"\n";
+        txt += "        ----"+"\n";
+        txt += "1.) Ingresar estudiante"+"\n";
+        txt += "2.) Listado de alumnos"+"\n";
+        txt += "3.) Nota más alta"+"\n";
+        txt += "4.) Lista completa "+"\n";
+        txt += "5.) Salir "+"\n";
+
+        while(salida){
+
+
+            int op = LE.leerInt(txt);
+            switch(op){
+                case 1:
+                ingresar_alumno();
+                break;
+
+                case 2:
+                lista_alumnos();
+                break;
+
+                case 3:
+                notaMayor();
+                break;
+
+                case 4:
+                lista_alumnos_total();
+
+                case 5:
+                salida = false;
+
+                default :
+                LE.mostrarAdvertencia("Ingrese una opcion valida");     
+
+            }
+            
+
+        }
 
             
     }
