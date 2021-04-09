@@ -50,9 +50,9 @@ public class Estudiantes{
                 vec = x;
             }             
         }
-
+        //Mostrar mas alumnos con la nota mayor
         LE.mostrarInformacion("promedio mas alto"+"\n"+nombres[vec]+"     nota :"+promedios[vec]);
-
+        // todos los numeros mayores se contatenaran
 
     }
 
@@ -68,6 +68,7 @@ public class Estudiantes{
 
     }
 
+   
     
     public void menu(){
 
@@ -95,7 +96,6 @@ public class Estudiantes{
                 }else{
                     ingresar_alumno();
                 }
-
                 
                 break;
 

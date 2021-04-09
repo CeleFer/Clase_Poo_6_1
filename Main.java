@@ -24,7 +24,6 @@ public class Main{
 
 
         Estudiantes objEstudiantes = new Estudiantes(tam);
-
         objEstudiantes.menu();
 
     }
